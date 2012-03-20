@@ -1,0 +1,22 @@
+!!! 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='public/stylesheets/style.css')
+  body
+      div
+        p Index of: 
+          span= path
+        table
+          thead
+            tr
+              th Name
+              th Last modified
+              th Size
+          tbody
+            - each item in items
+              tr
+                td
+                  a(href= item.path)= item.name
+                  td= item.lastModified
+                  td= item.size
